@@ -36,7 +36,7 @@ namespace AddressBook.Models
         {
             return _firstName;
         }
-        public static void SetFirst(string newFirst)
+        public void SetFirst(string newFirst)
         {
             _firstName = newFirst;
         }
@@ -45,7 +45,7 @@ namespace AddressBook.Models
         {
             return _lastName;
         }
-        public static void SetLast(string newLast)
+        public void SetLast(string newLast)
         {
             _lastName = newLast;
         }
@@ -54,7 +54,7 @@ namespace AddressBook.Models
         {
             return _phoneNumber;
         }
-        public static void SetNumber(string newNumber)
+        public void SetNumber(string newNumber)
         {
             _phoneNumber = newNumber;
         }
@@ -63,7 +63,7 @@ namespace AddressBook.Models
         {
             return _email;
         }
-        public static void SetEmail(string newEmail)
+        public void SetEmail(string newEmail)
         {
             _email = newEmail;
         }
@@ -72,7 +72,7 @@ namespace AddressBook.Models
         {
             return _street;
         }
-        public static void SetStreet(string newStreet)
+        public void SetStreet(string newStreet)
         {
             _street = newStreet;
         }
@@ -81,7 +81,7 @@ namespace AddressBook.Models
         {
             return _city;
         }
-        public static void SetCity(string newCity)
+        public void SetCity(string newCity)
         {
             _city = newCity;
         }
@@ -90,7 +90,7 @@ namespace AddressBook.Models
         {
             return _state;
         }
-        public static void SetState(string newState)
+        public void SetState(string newState)
         {
             _state = newState;
         }
@@ -99,7 +99,7 @@ namespace AddressBook.Models
         {
             return _zip;
         }
-        public static void SetZip(string newZip)
+        public void SetZip(string newZip)
         {
             _zip = newZip;
         }
@@ -109,9 +109,14 @@ namespace AddressBook.Models
             return _instances;
         }
 
+        public int GetId()
+        {
+            return _id;
+        }
+
         public static Contact Find(int searchId)
         {
-            _instances.[searchId++];
+            return _instances[searchId++];
         }
 
     }

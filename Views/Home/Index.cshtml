@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Address Book</title>
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+      <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    </head>
+    <div class= 'container'>
+      <div class= 'jumbotron'>
+        <body>
+        <h1>Address Book:</h1>
+      </div>
+      <h3> Contacts: </h3>
+    <ul>
+      @foreach(var contact in Model)
+      {
+        <br>
+        <li>
+          <strong>@contact.GetLast(), @contact.GetFirst()<br></strong>
+          @contact.GetNumber()<br>
+          @contact.GetEmail()<br>
+          @contact.GetStreet()<br>
+          @contact.GetCity()<br>
+          @contact.GetState()<br>
+          @contact.GetZip()<br>
+        </li>
+      }
+    </ul>
+    <p><a href="/contact/new">Add contact.</a></p>
+    </body>
+  </div>
+</html>
