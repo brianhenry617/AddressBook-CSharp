@@ -27,5 +27,12 @@ namespace AddressBook.Controllers
         List <Contact> allContacts = Contact.GetAll();
         return View("Index", allContacts);
         }
+
+        [HttpPost("contact/clear")]
+        public ActionResult Clear()
+        {
+            Contact.ClearAll();
+            return View();
+        }
     }
 }
